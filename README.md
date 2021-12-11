@@ -52,6 +52,17 @@ Ohh my God :|
 
 ### <a name="2.3"></a>Comment Lines
 
+Yorum satırları bilgisayarın okumadığı veya ilgilenmediği satırlar diyebiliriz. Peki buna neden ihtiyacımız olsun?
+Genelde yazdığımız kodlardaki bazı detayları neden yazdığımızı unutabiliriz veya bu kodları sadece siz değil başka yazılımcılarda kullanmak durumunda kalabilir bu nedenle yazdığımız kodları olabildiğince açık ve belirli yazmalıyız. Bu nedenle yorum satırları kullanarak daha açıklayıcı notlar bırakabiliriz sonrası için
+
+Kotlinde birden fazla yorum satırı bırakma şekli vardır:
+
+1. `//`ifadesini kullanarak bu ifadenin sağında kalan 
+
+
+![image](https://user-images.githubusercontent.com/70329389/145679445-fb55c3ad-cba1-497b-a578-13e80845bde3.png)
+
+
 
 
 
