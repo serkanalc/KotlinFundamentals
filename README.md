@@ -4,7 +4,7 @@
 ## Content:
 
 - [What's/Why Kotlin?](#1)
-- [Kotlin Syntax Basic](#2)
+- [Kotlin Basic Syntax](#2)
   - [Hello World](#2.1)
   - [Difference of Print & Println](#2.2)
   - [Comment Lines](#2.3)
