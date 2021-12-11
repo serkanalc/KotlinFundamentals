@@ -8,7 +8,13 @@
   - [Hello World](#2.1)
   - [Difference of Print & Println](#2.2)
   - [Comment Lines](#2.3)
-
+  - [Escape Characters](#2.4)
+  - [Data Types](#2.5)
+  - [Variable Declaration](#2.6)
+  - [Semicolon Usage](#2.7)
+  - [Type Conversion](#2.8)
+  - [User Input](#2.9)
+  - [Conditions Expression](2.10)
 
 
 
@@ -57,10 +63,113 @@ Genelde yazdığımız kodlardaki bazı detayları neden yazdığımızı unutab
 
 Kotlinde birden fazla yorum satırı bırakma şekli vardır:
 
-1. `//`ifadesini kullanarak bu ifadenin sağında kalan 
+1. `//`ifadesini kullanarak bu ifadenin sağında kalan bütün değerleri yorum satırı haline getirebilirsiniz
+2. `/* */` ifadeleri aralarında bulunan bütün metni yorum satırları haline getirir. Çoklu satırlarda önerilir
 
 
 ![image](https://user-images.githubusercontent.com/70329389/145679445-fb55c3ad-cba1-497b-a578-13e80845bde3.png)
+
+### <a name="2.4"></a> Escape Characters
+
+Kaçış karakterleri, tab, enter, satır sonu gibi doğrudan klavyeden girilemeyen bazı tuşları oluşturmak içinde kullanılır. 
+
+1. `$` veya `${}` sembolleri tırnak içerisinde bile tanımladığımız değişkenleri değerleriyle çağırabilmemizi sağlar
+
+![image](https://user-images.githubusercontent.com/70329389/145680530-889281a7-c956-4edf-9785-c804e3b7fd0f.png)
+
+2. `\n` kullanımı println mantığına benzerdir. Eğer `\n`'i tırnak içerisinde kullanırsanız sonrasında gelen değerleri enter tuşuna basılmış gibi bir alt satırdan başlatır. Kısaltılması **New Line**'dan gelmektedir
+3. `\t`kullanımı kendinde sonra gelenleri bir kere tab tuşuna basılmış gibi ekrana gösterir. Kısaltılması **tab**'dan gelmektedir.
+
+
+### <a name="2.5"></a> Data Types
+
+Veri tipleri kodlamada sıklıkla kullanılan verinin türünü belirtme şeklimizdir. Okuduğunuz bir şeyin cümle olduğunu birden fazla kelimeden oluşuyor olmasından anladığınız gibi veya kelime olduğunu harflerden oluşmasından anladığınız gibi bilgisayarada belli verileri sınıflandırıp anlatmanız lazım. 
+
+![image](https://user-images.githubusercontent.com/70329389/145681032-13ad482f-795b-4ee7-8472-616b253020bd.png)
+
+### <a name="2.6"></a> Variable Declaration
+
+Daha önce tanımlanmadıysa eğer bilgisayar için kelimeler bir şey ifade etmez. Bu nedenle daha sonrası için ihtiyaca göre belli kelimelere veya harflere bazı değerler atamamız gerekebilir. Bunu yapmanın iki yolu vardır:
+
+### Var:
+
+`var`, *variable*'ın yani değişkenin kısaltılmış halidir ve daha sonra içinde tuttuğu değişebilecek değerleri tanımlamak için kullanılır. İşte kullanım şekli :
+
+![image](https://user-images.githubusercontent.com/70329389/145681321-fe231e92-915c-4210-9465-8df0d0ac3e57.png)
+
+### Val : 
+
+`val`, *value*'nun yani değer kelimesinin kısaltılmış halidir ve daha sonra içinde tuuttuğu değişkenin değerini değiştirilemez olarak tanımlar. Sonrasında herhangi bir işlem ile değiştirilmeye çalışıldığında hata verecektir. İşte kullanımı:
+
+![image](https://user-images.githubusercontent.com/70329389/145681411-0e3c3d38-f870-448c-a1e5-393ec84084cd.png)
+
+### Attantion:
+
+`val` veya var `var` kullanırken aşağıda gördüğünüz gibi değişkenlerin veri türlerinide belirtebilirsiniz ama buna çoğunlukla gerek yoktur. Çünkü Kotlin bunu anlayacak ve ihtiyaç duymayacak kadar zeki bir dil
+
+### <a name="2.7"></a> Semicolon Usage
+
+Java kodlama diline aşina olanlar için şu ana kadar büyük bir eksiklik fark etmişlerdir. yazdığımız hiçbir kodda semicolons yani `;` kullanmadık, çünkü Kotlin satırın bittiğini anlamak için semicolons'a ihtiyaç duymaz. Ama çoğu java yazılımcısı kotline geçtiğinde alışkanlık olarak satır sonuna semicolons ekler, Kotlin bunada hata vermeyecektir.
+
+1 İstisna dışında semicolonsları satır sonunda kullanmanıza gerek yoktur zaten bu istisna hariç eklediğinizdede giri gözükecektir. Peki bu istisna ne? 
+
+Tek satırda birden fazla fonksiyon veya kod çalıştırmak istiyorsanız semicolonsları aşağıdaki gibi kullanmanız gerekmektedir.
+
+![image](https://user-images.githubusercontent.com/70329389/145681708-9e2ee90d-ccb9-43d0-b164-768d068a1120.png)
+
+### <a name="2.8"></a> Type Conversion
+
+Daha önceki konu başlıklarından birinde [Data Type](#2.5)'ı işlemiştik. Bu bölümde ise bu türleri değiştirmemiz gerektiğinde nasıl bir yazım şeklini kullanabileceğimizi göreceğiz:
+
+![image](https://user-images.githubusercontent.com/70329389/145681805-1165adf3-8ad1-49bc-b59b-931b9a21f708.png)
+
+### <a name="2.9"></a> User Input
+
+Yazdığınız kodun bazen kullanıcıdan değer alması gerekebilir. Bunun için 2 farklı kullanım vardır 
+
+1. `readLine()`fonksiyonunu kullanarak tek satırda kullanıcıdan bir değer isteyebilirsiniz. kullanım şekli: 
+
+<img width="1200" alt="1" src="https://user-images.githubusercontent.com/70329389/145682106-7e010055-5c3d-40cf-ba79-6d53eaf818fb.png">
+
+2. `Scanner()`kullanarak aşağıdaki gibi kullanıcıdan bir değer alabilirsiniz
+
+<img width="1200" alt="1" src="https://user-images.githubusercontent.com/70329389/145682297-28a80ebd-abf6-49b1-94c5-8aab5c8ebfcf.png">
+
+### <a name="2.10"></a> Conditions Expression
+
+### if/else Expression
+
+Kodlarımızı yazarken çoğunluklara koşullara ihtiyaç duyarız , bu gibi durumlarda `if / else / else if` ifadelerini kullanabilirsiniz. İşte kullanım şekilleri:
+
+![image](https://user-images.githubusercontent.com/70329389/145682509-f03fe5aa-bea9-4187-b901-7801e71cee25.png)
+
+### When Expression
+
+`When`içinde birçok koşul barındıran bir yapıdır. Daha okunaklı ve daha kısa yazımı yüzünden tercih edilmesi daha olasıdır. Diğer dillerdeki switch case mantığı gibi çalışır
+
+![image](https://user-images.githubusercontent.com/70329389/145682593-5bcc9ef6-ab4c-4536-8daf-683c2b750bad.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
